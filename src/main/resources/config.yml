@@ -1,1 +1,11 @@
-#Empty configuration file. you should add stuff here yourself or remove it :)
+token: ""
+
+#Whitelist
+useWhitelist: true
+guildId: ""
+permittedRoles:
+
+#Alternate storage location for AuthProfiles
+useAlternateLocation: false
+#On Windows, use DOUBLE backslashes!. If you are using Windows Subsystem for Linux use /mnt/<DISK>/ instead of <DISK>:\\
+alternateLocation: ""

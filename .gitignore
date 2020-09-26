@@ -1,0 +1,10 @@
+# Gradle
+releases/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# Minecraft
+server/
