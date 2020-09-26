@@ -1,8 +1,10 @@
 # Gradle
 releases/
+build/
 
 # Eclipse
 .settings/
+bin/
 .project
 .classpath
 

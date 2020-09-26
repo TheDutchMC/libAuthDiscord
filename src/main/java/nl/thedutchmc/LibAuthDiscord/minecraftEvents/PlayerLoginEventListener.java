@@ -24,6 +24,10 @@ public class PlayerLoginEventListener implements Listener {
 		if(event.getPlayer().isOp()) {
 			return;
 		}
+		
+		if(event.getPlayer().isWhitelisted()) {
+			return;
+		}
 
 		if(!Authentication.isAuthenticated(event.getPlayer().getUniqueId())) {
 			
