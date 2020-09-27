@@ -2,6 +2,7 @@ package nl.thedutchmc.LibAuthDiscord.authentication;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
 
@@ -83,7 +84,12 @@ public class Authentication {
 	
 	public static int createPendingAuthentication(UUID minecraftUuid, String username) {		
 		
-		if(pendingVerifications.containsValue(minecraftUuid)) return -1;
+		if(pendingVerifications.containsValue(minecraftUuid)) {
+			for(Map.Entry<Integer, UUID> entry : pendingVerifications.entrySet()) {
+				
+				if(entry.getValue().equals(minecraftUuid)) return entry.getKey();
+			}
+		}
 		
 		int n = generateCode();
 		
