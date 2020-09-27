@@ -16,6 +16,7 @@ permittedRoles:
 - <role id 2>
 etc
 ```
+> **Note:** Do not include the ``<`` and ``>`` symbols. Also make sure there is a space between the role ID and the hypen symbol (``-``)
 
 ### Support
 My discord server for support can be found here: https://discord.gg/xE3FcGj
