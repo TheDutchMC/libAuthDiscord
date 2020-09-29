@@ -1,9 +1,13 @@
 package nl.thedutchmc.LibAuthDiscord.discord;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.security.auth.login.LoginException;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 import nl.thedutchmc.LibAuthDiscord.LibAuthDiscord;
 import nl.thedutchmc.LibAuthDiscord.discord.eventListeners.PrivateMessageReceivedEventListener;
 
@@ -19,8 +23,13 @@ public class JdaHandler {
 	
 	public void setup(String token) {
 		
+		List<GatewayIntent> intents = new ArrayList<>();
+		intents.add(GatewayIntent.DIRECT_MESSAGES);
+		
 		try {
-			jda = JDABuilder.createDefault(token).build();
+			jda = JDABuilder.createDefault(token)
+					.enableIntents(intents)
+					.build();
 			
 			jda.awaitReady();
 			
