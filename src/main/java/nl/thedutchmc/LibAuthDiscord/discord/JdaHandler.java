@@ -37,7 +37,7 @@ public class JdaHandler {
 			plugin.logWarn("There was an issue loggin in to Discord. Please check your internet connection and the bot token!");
 		}
 		
-		jda.addEventListener(new PrivateMessageReceivedEventListener());
+		jda.addEventListener(new PrivateMessageReceivedEventListener(plugin));
 	}
 	
 	public String getBotNameAsTag() {

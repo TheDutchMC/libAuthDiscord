@@ -3,4 +3,19 @@ main: @groupId@.LibAuthDiscord.LibAuthDiscord
 version: @version@
 author: @author@
 api-version: @apiVersion@
-
+commands:
+ auth:
+  description: LibAuthDiscord's Base command
+permissions:
+ auth.*:
+  description: Grants access to all commands
+  default: op
+  children:
+   auth.unlink.self: true
+   auth.unlink.others: true
+ auth.unlink.self:
+  description: Unlink yourself from Discord
+  default: true
+ auth.unlink.others:
+  description: Unlink someone else from Discord
+  default: op

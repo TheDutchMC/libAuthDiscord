@@ -32,6 +32,10 @@ allprojects {
 		filter ReplaceTokens, tokens: [apiVersion: pluginApiVersion]
 		}
     }
+    
+	javadoc {
+    	source = sourceSets.main.allJava
+	}
 }
 
 dependencies {
